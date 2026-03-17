@@ -1,0 +1,16 @@
+# Variables sensibles
+.env
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+venv/
+
+# Airflow - fichiers générés
+airflow/logs/
+airflow/plugins/
+
+# dbt
+.dbt/
