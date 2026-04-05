@@ -1,0 +1,442 @@
+[0m22:48:29.395814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7855528280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7853e6bd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7854938c40>]}
+
+
+============================== 22:48:29.397811 | ad069829-2b46-423f-9113-376c788e68d2 ==============================
+[0m22:48:29.397811 [info ] [MainThread]: Running with dbt=1.8.1
+[0m22:48:29.398199 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/home/ing/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:48:29.403441 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/ing/.dbt')}
+[0m22:48:29.403766 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m22:48:38.779491 [error] [MainThread]: Encountered an error:
+
+[0m22:48:38.781759 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 325, in run
+    project_name = self.get_valid_project_name()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 279, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:48:38.783825 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 9.428581, "process_user_time": 0.813202, "process_kernel_time": 0.043849, "process_mem_max_rss": "85492", "process_in_blocks": "40", "process_out_blocks": "8", "command_success": false}
+[0m22:48:38.784146 [debug] [MainThread]: Command `dbt init` failed at 22:48:38.784077 after 9.43 seconds
+[0m22:48:38.784410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7855528280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f78557e6160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f78557e6190>]}
+[0m22:48:38.784699 [debug] [MainThread]: Flushing usage events
+[0m22:48:39.712698 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:49:00.742320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe941dca310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe94070ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9406ddee0>]}
+
+
+============================== 22:49:00.744405 | 06a4f0e2-08ee-47db-a1ff-b7d057bf255f ==============================
+[0m22:49:00.744405 [info ] [MainThread]: Running with dbt=1.8.1
+[0m22:49:00.744777 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init dbt', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:49:28.829436 [debug] [MainThread]: Starter project path: /home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m22:49:28.833868 [info ] [MainThread]: 
+Your new dbt project "piplane_finance" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:49:28.834802 [info ] [MainThread]: Setting up your profile.
+[0m22:49:55.339322 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m22:49:55.339729 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m23:16:33.555207 [error] [MainThread]: Encountered an error:
+
+[0m23:16:33.558295 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:16:33.560685 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 1652.8599, "process_user_time": 0.921476, "process_kernel_time": 0.027923, "process_mem_max_rss": "96956", "process_out_blocks": "96", "command_success": false, "process_in_blocks": "0"}
+[0m23:16:33.561845 [debug] [MainThread]: Command `dbt init` failed at 23:16:33.561595 after 1652.86 seconds
+[0m23:16:33.562781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe941dca310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe93e5f1f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe93e5d5a60>]}
+[0m23:16:33.563860 [debug] [MainThread]: Flushing usage events
+[0m23:16:34.613900 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:16:38.608450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03e9822b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03d153280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03d153310>]}
+
+
+============================== 23:16:38.610527 | d261903c-84a9-43e5-86b1-546d0899fe8c ==============================
+[0m23:16:38.610527 [info ] [MainThread]: Running with dbt=1.8.1
+[0m23:16:38.614537 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:16:51.206353 [debug] [MainThread]: Starter project path: /home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m23:16:51.211474 [info ] [MainThread]: 
+Your new dbt project "pipeline_finance" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:16:51.212543 [info ] [MainThread]: Setting up your profile.
+[0m23:16:53.319559 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m23:16:53.319986 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m23:19:49.084661 [info ] [MainThread]: Profile pipeline_finance written to /home/ing/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:19:49.085427 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 190.5169, "process_user_time": 0.890375, "process_kernel_time": 0.044117, "process_mem_max_rss": "96744", "process_out_blocks": "80", "process_in_blocks": "0"}
+[0m23:19:49.085791 [debug] [MainThread]: Command `dbt init` succeeded at 23:19:49.085720 after 190.52 seconds
+[0m23:19:49.086063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03e9822b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03f7b5790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe03d153d30>]}
+[0m23:19:49.086369 [debug] [MainThread]: Flushing usage events
+[0m23:19:50.047579 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:25:46.537638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb4986522e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb496e25f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb496f651c0>]}
+
+
+============================== 23:25:46.539697 | b447ef99-fdc0-4e82-b45c-97259c569855 ==============================
+[0m23:25:46.539697 [info ] [MainThread]: Running with dbt=1.8.1
+[0m23:25:46.540089 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/ing/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m23:25:46.545576 [info ] [MainThread]: dbt version: 1.8.1
+[0m23:25:46.545894 [info ] [MainThread]: python version: 3.8.10
+[0m23:25:46.546142 [info ] [MainThread]: python path: /home/ing/Bureau/finance-pipeline/venv/bin/python3
+[0m23:25:46.546359 [info ] [MainThread]: os info: Linux-5.15.0-139-generic-x86_64-with-glibc2.29
+[0m23:25:46.595608 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m23:25:46.596027 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m23:25:46.626376 [info ] [MainThread]: Using profiles dir at /home/ing/.dbt
+[0m23:25:46.626788 [info ] [MainThread]: Using profiles.yml file at /home/ing/.dbt/profiles.yml
+[0m23:25:46.627050 [info ] [MainThread]: Using dbt_project.yml file at /home/ing/Bureau/finance-pipeline/dbt_project.yml
+[0m23:25:46.627434 [info ] [MainThread]: adapter type: redshift
+[0m23:25:46.627678 [info ] [MainThread]: adapter version: 1.8.1
+[0m23:25:46.627892 [info ] [MainThread]: Configuration:
+[0m23:25:46.628108 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:25:46.628311 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:25:46.628501 [info ] [MainThread]: Required dependencies:
+[0m23:25:46.628710 [debug] [MainThread]: Executing "git --help"
+[0m23:25:46.640640 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [--help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone             Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init              Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add               Ajouter le contenu de fichiers dans l'index\n   mv                D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore           Restaurer les fichiers l'arbre de travail\n   rm                Supprimer des fichiers de la copie de travail et de l'index\n   sparse-checkout   Initialiser et modifier l'extraction clairsem\xc3\xa9e\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect            Trouver par recherche binaire la modification qui a introduit un bogue\n   diff              Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep              Afficher les lignes correspondant \xc3\xa0 un motif\n   log               Afficher l'historique des validations\n   show              Afficher diff\xc3\xa9rents types d'objets\n   status            Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch            Lister, cr\xc3\xa9er ou supprimer des branches\n   commit            Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge             Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase            R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset             R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch            Basculer de branche\n   tag               Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch             T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull              Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push              Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m23:25:46.641630 [debug] [MainThread]: STDERR: "b''"
+[0m23:25:46.642047 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:25:46.642403 [info ] [MainThread]: Connection:
+[0m23:25:46.642778 [info ] [MainThread]:   host: finance-pipeline-workgroup.075313985707.us-east-1.redshift-serverless.amazonaws.com
+[0m23:25:46.643002 [info ] [MainThread]:   user: admin
+[0m23:25:46.643213 [info ] [MainThread]:   port: 5439
+[0m23:25:46.643432 [info ] [MainThread]:   database: dev
+[0m23:25:46.643637 [info ] [MainThread]:   method: database
+[0m23:25:46.643841 [info ] [MainThread]:   cluster_id: None
+[0m23:25:46.644046 [info ] [MainThread]:   iam_profile: None
+[0m23:25:46.644248 [info ] [MainThread]:   schema: finance
+[0m23:25:46.644451 [info ] [MainThread]:   sslmode: prefer
+[0m23:25:46.644644 [info ] [MainThread]:   region: None
+[0m23:25:46.644845 [info ] [MainThread]:   sslmode: prefer
+[0m23:25:46.645044 [info ] [MainThread]:   region: None
+[0m23:25:46.645243 [info ] [MainThread]:   iam_profile: None
+[0m23:25:46.645443 [info ] [MainThread]:   autocreate: False
+[0m23:25:46.645645 [info ] [MainThread]:   db_groups: []
+[0m23:25:46.645846 [info ] [MainThread]:   ra3_node: False
+[0m23:25:46.646046 [info ] [MainThread]:   connect_timeout: None
+[0m23:25:46.646246 [info ] [MainThread]:   role: None
+[0m23:25:46.646448 [info ] [MainThread]:   retries: 1
+[0m23:25:46.646649 [info ] [MainThread]:   autocommit: True
+[0m23:25:46.647237 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m23:25:46.650535 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m23:25:46.659058 [debug] [MainThread]: Using redshift connection "debug"
+[0m23:25:46.659682 [debug] [MainThread]: On debug: select 1 as id
+[0m23:25:46.660066 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:25:46.665000 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m23:25:46.666795 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m23:27:05.257549 [error] [MainThread]: Encountered an error:
+
+[0m23:27:05.259485 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 405, in debug
+    results = task.run()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 150, in run
+    connection_status = self.test_connection()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 471, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 449, in attempt_connection
+    adapter.debug_query()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/impl.py", line 186, in debug_query
+    self.execute("select 1 as id")
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 379, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 346, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 372, in add_query
+    connection, cursor = super().add_query(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 92, in add_query
+    cursor = connection.handle.cursor()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/contracts/connection.py", line 95, in handle
+    self._handle.resolve(self)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/contracts/connection.py", line 119, in resolve
+    return self.opener(connection)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 327, in open
+    open_connection = cls.retry_connection(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 192, in connect
+    c = redshift_connector.connect(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/redshift_connector/__init__.py", line 376, in connect
+    return Connection(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/redshift_connector/core.py", line 628, in __init__
+    self._usock.connect(hostport)
+KeyboardInterrupt
+
+[0m23:27:05.262093 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 78.76507, "process_user_time": 0.972804, "process_kernel_time": 0.076062, "process_mem_max_rss": "99112", "process_in_blocks": "16", "process_out_blocks": "48", "command_success": false}
+[0m23:27:05.263724 [debug] [MainThread]: Command `dbt debug` failed at 23:27:05.263417 after 78.77 seconds
+[0m23:27:05.264794 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:27:05.265879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb4986522e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb4966e2a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb494de3610>]}
+[0m23:27:05.266918 [debug] [MainThread]: Flushing usage events
+[0m23:27:06.310432 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:33:38.442140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99f2ef7220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99f183ad60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99f180bd30>]}
+
+
+============================== 23:33:38.444575 | 5a2d45ec-26f7-42a0-a1d6-7321c8cdd0ef ==============================
+[0m23:33:38.444575 [info ] [MainThread]: Running with dbt=1.8.1
+[0m23:33:38.445033 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:33:38.453418 [info ] [MainThread]: dbt version: 1.8.1
+[0m23:33:38.453828 [info ] [MainThread]: python version: 3.8.10
+[0m23:33:38.454201 [info ] [MainThread]: python path: /home/ing/Bureau/finance-pipeline/venv/bin/python3
+[0m23:33:38.454540 [info ] [MainThread]: os info: Linux-5.15.0-139-generic-x86_64-with-glibc2.29
+[0m23:33:38.505016 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m23:33:38.505406 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m23:33:38.536010 [info ] [MainThread]: Using profiles dir at /home/ing/.dbt
+[0m23:33:38.536419 [info ] [MainThread]: Using profiles.yml file at /home/ing/.dbt/profiles.yml
+[0m23:33:38.536667 [info ] [MainThread]: Using dbt_project.yml file at /home/ing/Bureau/finance-pipeline/dbt_project.yml
+[0m23:33:38.537022 [info ] [MainThread]: adapter type: redshift
+[0m23:33:38.537253 [info ] [MainThread]: adapter version: 1.8.1
+[0m23:33:38.537487 [info ] [MainThread]: Configuration:
+[0m23:33:38.537689 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:33:38.537887 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:33:38.538084 [info ] [MainThread]: Required dependencies:
+[0m23:33:38.538309 [debug] [MainThread]: Executing "git --help"
+[0m23:33:38.542658 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [--help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone             Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init              Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add               Ajouter le contenu de fichiers dans l'index\n   mv                D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore           Restaurer les fichiers l'arbre de travail\n   rm                Supprimer des fichiers de la copie de travail et de l'index\n   sparse-checkout   Initialiser et modifier l'extraction clairsem\xc3\xa9e\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect            Trouver par recherche binaire la modification qui a introduit un bogue\n   diff              Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep              Afficher les lignes correspondant \xc3\xa0 un motif\n   log               Afficher l'historique des validations\n   show              Afficher diff\xc3\xa9rents types d'objets\n   status            Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch            Lister, cr\xc3\xa9er ou supprimer des branches\n   commit            Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge             Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase            R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset             R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch            Basculer de branche\n   tag               Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch             T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull              Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push              Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m23:33:38.543212 [debug] [MainThread]: STDERR: "b''"
+[0m23:33:38.543497 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:33:38.543762 [info ] [MainThread]: Connection:
+[0m23:33:38.544024 [info ] [MainThread]:   host: finance-pipeline-workgroup.075313985707.us-east-1.redshift-serverless.amazonaws.com
+[0m23:33:38.544244 [info ] [MainThread]:   user: admin
+[0m23:33:38.544453 [info ] [MainThread]:   port: 5439
+[0m23:33:38.544657 [info ] [MainThread]:   database: dev
+[0m23:33:38.544859 [info ] [MainThread]:   method: database
+[0m23:33:38.545065 [info ] [MainThread]:   cluster_id: None
+[0m23:33:38.545269 [info ] [MainThread]:   iam_profile: None
+[0m23:33:38.545472 [info ] [MainThread]:   schema: finance
+[0m23:33:38.545674 [info ] [MainThread]:   sslmode: prefer
+[0m23:33:38.545876 [info ] [MainThread]:   region: None
+[0m23:33:38.546079 [info ] [MainThread]:   sslmode: prefer
+[0m23:33:38.546282 [info ] [MainThread]:   region: None
+[0m23:33:38.546484 [info ] [MainThread]:   iam_profile: None
+[0m23:33:38.546689 [info ] [MainThread]:   autocreate: False
+[0m23:33:38.546894 [info ] [MainThread]:   db_groups: []
+[0m23:33:38.547097 [info ] [MainThread]:   ra3_node: False
+[0m23:33:38.547299 [info ] [MainThread]:   connect_timeout: None
+[0m23:33:38.547519 [info ] [MainThread]:   role: None
+[0m23:33:38.547730 [info ] [MainThread]:   retries: 1
+[0m23:33:38.547935 [info ] [MainThread]:   autocommit: True
+[0m23:33:38.548415 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m23:33:38.552014 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m23:33:38.557964 [debug] [MainThread]: Using redshift connection "debug"
+[0m23:33:38.558376 [debug] [MainThread]: On debug: select 1 as id
+[0m23:33:38.558645 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:33:38.562999 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m23:33:38.563923 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m23:33:43.499276 [error] [MainThread]: Encountered an error:
+
+[0m23:33:43.501003 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 405, in debug
+    results = task.run()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 150, in run
+    connection_status = self.test_connection()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 471, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/task/debug.py", line 449, in attempt_connection
+    adapter.debug_query()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/impl.py", line 186, in debug_query
+    self.execute("select 1 as id")
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 379, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 346, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 372, in add_query
+    connection, cursor = super().add_query(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 92, in add_query
+    cursor = connection.handle.cursor()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/contracts/connection.py", line 95, in handle
+    self._handle.resolve(self)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/contracts/connection.py", line 119, in resolve
+    return self.opener(connection)
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 327, in open
+    open_connection = cls.retry_connection(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/dbt/adapters/redshift/connections.py", line 192, in connect
+    c = redshift_connector.connect(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/redshift_connector/__init__.py", line 376, in connect
+    return Connection(
+  File "/home/ing/Bureau/finance-pipeline/venv/lib/python3.8/site-packages/redshift_connector/core.py", line 628, in __init__
+    self._usock.connect(hostport)
+KeyboardInterrupt
+
+[0m23:33:43.503944 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 5.110153, "process_user_time": 0.982673, "process_kernel_time": 0.04394, "process_mem_max_rss": "99084", "process_out_blocks": "32", "command_success": false, "process_in_blocks": "0"}
+[0m23:33:43.505076 [debug] [MainThread]: Command `dbt debug` failed at 23:33:43.504825 after 5.11 seconds
+[0m23:33:43.505893 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:33:43.506730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99f2ef7220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99ef6bff10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99ef67b550>]}
+[0m23:33:43.507713 [debug] [MainThread]: Flushing usage events
+[0m23:33:44.465871 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:33:15.369885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6e016430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6c986310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6c89ceb0>]}
+
+
+============================== 19:33:15.372320 | 649db5d2-dcaf-4e14-b912-67dfb79491c3 ==============================
+[0m19:33:15.372320 [info ] [MainThread]: Running with dbt=1.8.1
+[0m19:33:15.372795 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/ing/.dbt', 'log_path': '/home/ing/Bureau/finance-pipeline/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select stg_entreprises', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:15.447141 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m19:33:15.447610 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m19:33:15.559230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a8dec40>]}
+[0m19:33:15.597963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6d406700>]}
+[0m19:33:15.604723 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m19:33:15.623038 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m19:33:15.623949 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:33:15.624319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a7a2ca0>]}
+[0m19:33:16.369332 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pipeline_finance.example
+[0m19:33:16.373373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a629a90>]}
+[0m19:33:16.417060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a55a640>]}
+[0m19:33:16.418166 [info ] [MainThread]: Found 489 macros
+[0m19:33:16.418671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '649db5d2-dcaf-4e14-b912-67dfb79491c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a531b80>]}
+[0m19:33:16.419280 [warn ] [MainThread]: The selection criterion 'stg_entreprises' does not match any enabled nodes
+[0m19:33:16.419953 [info ] [MainThread]: 
+[0m19:33:16.420259 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:33:16.420658 [debug] [MainThread]: Command end result
+[0m19:33:16.441016 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.114064, "process_user_time": 1.899168, "process_kernel_time": 0.082037, "process_mem_max_rss": "103792", "process_in_blocks": "50168", "process_out_blocks": "2920"}
+[0m19:33:16.441485 [debug] [MainThread]: Command `dbt run` succeeded at 19:33:16.441395 after 1.11 seconds
+[0m19:33:16.441849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6e016430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6de36bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e6a5a1190>]}
+[0m19:33:16.442210 [debug] [MainThread]: Flushing usage events
+[0m19:33:16.842137 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:33:31.663546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe727695460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe726afbb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe725ed6640>]}
+
+
+============================== 19:33:31.665746 | 86f99ea1-57d7-4cd3-a8b0-338b52be9341 ==============================
+[0m19:33:31.665746 [info ] [MainThread]: Running with dbt=1.8.1
+[0m19:33:31.666222 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/ing/Bureau/finance-pipeline/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select stg_entreprises', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:31.727492 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m19:33:31.727933 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m19:33:31.837339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86f99ea1-57d7-4cd3-a8b0-338b52be9341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe727641be0>]}
+[0m19:33:31.878063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86f99ea1-57d7-4cd3-a8b0-338b52be9341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723ee5df0>]}
+[0m19:33:31.878804 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m19:33:31.897065 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m19:33:31.951814 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:33:31.952281 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:33:31.952684 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pipeline_finance.example
+[0m19:33:31.956894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86f99ea1-57d7-4cd3-a8b0-338b52be9341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723c1ca30>]}
+[0m19:33:32.002675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86f99ea1-57d7-4cd3-a8b0-338b52be9341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723bb99a0>]}
+[0m19:33:32.003197 [info ] [MainThread]: Found 489 macros
+[0m19:33:32.003529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86f99ea1-57d7-4cd3-a8b0-338b52be9341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723bb7430>]}
+[0m19:33:32.004016 [warn ] [MainThread]: The selection criterion 'stg_entreprises' does not match any enabled nodes
+[0m19:33:32.004623 [info ] [MainThread]: 
+[0m19:33:32.004931 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:33:32.006436 [debug] [MainThread]: Command end result
+[0m19:33:32.028040 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.40570992, "process_user_time": 1.140989, "process_kernel_time": 0.096421, "process_mem_max_rss": "103316", "process_out_blocks": "1928", "process_in_blocks": "0"}
+[0m19:33:32.028798 [debug] [MainThread]: Command `dbt run` succeeded at 19:33:32.028667 after 0.41 seconds
+[0m19:33:32.029359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe727695460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723bb7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe723bb7250>]}
+[0m19:33:32.030063 [debug] [MainThread]: Flushing usage events
+[0m19:33:32.389221 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:34:03.413597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b81fb430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b6b6b310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b6a81eb0>]}
+
+
+============================== 19:34:03.415702 | 926f469b-3052-4c8b-8b21-1f765936a102 ==============================
+[0m19:34:03.415702 [info ] [MainThread]: Running with dbt=1.8.1
+[0m19:34:03.416302 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/ing/Bureau/finance-pipeline/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select stg_entreprises', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:34:03.472772 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m19:34:03.473182 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m19:34:03.572996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '926f469b-3052-4c8b-8b21-1f765936a102', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b4ac3c40>]}
+[0m19:34:03.611719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '926f469b-3052-4c8b-8b21-1f765936a102', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b75fe700>]}
+[0m19:34:03.612395 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m19:34:03.626279 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m19:34:03.681863 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:34:03.682239 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:34:03.682672 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pipeline_finance.example
+[0m19:34:03.687624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '926f469b-3052-4c8b-8b21-1f765936a102', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b4782a00>]}
+[0m19:34:03.731504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '926f469b-3052-4c8b-8b21-1f765936a102', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b471eb80>]}
+[0m19:34:03.732014 [info ] [MainThread]: Found 489 macros
+[0m19:34:03.732336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '926f469b-3052-4c8b-8b21-1f765936a102', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b62d3bb0>]}
+[0m19:34:03.732884 [warn ] [MainThread]: The selection criterion 'stg_entreprises' does not match any enabled nodes
+[0m19:34:03.733543 [info ] [MainThread]: 
+[0m19:34:03.733864 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:34:03.735646 [debug] [MainThread]: Command end result
+[0m19:34:03.756646 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.3844689, "process_user_time": 1.156215, "process_kernel_time": 0.092017, "process_mem_max_rss": "103056", "process_out_blocks": "1944", "process_in_blocks": "0"}
+[0m19:34:03.757189 [debug] [MainThread]: Command `dbt run` succeeded at 19:34:03.757061 after 0.39 seconds
+[0m19:34:03.757578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b81fb430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b4930ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23b4782910>]}
+[0m19:34:03.757934 [debug] [MainThread]: Flushing usage events
+[0m19:34:04.142302 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:36:26.559828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41877503a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4185f84700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4186ba82b0>]}
+
+
+============================== 19:36:26.562097 | 5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0 ==============================
+[0m19:36:26.562097 [info ] [MainThread]: Running with dbt=1.8.1
+[0m19:36:26.562566 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ing/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/ing/Bureau/finance-pipeline/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select stg_entreprises', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:36:26.619336 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m19:36:26.619815 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m19:36:26.728566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41876fcb80>]}
+[0m19:36:26.769686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41891aadf0>]}
+[0m19:36:26.770397 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m19:36:26.784920 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m19:36:26.843833 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:36:26.844296 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:36:26.844711 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.pipeline_finance.example
+[0m19:36:26.849027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4183cd7970>]}
+[0m19:36:26.895014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4183c9ae20>]}
+[0m19:36:26.895614 [info ] [MainThread]: Found 489 macros
+[0m19:36:26.895964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f68e4c7-e65a-4c04-9c45-ee5265f2c3c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4183f700a0>]}
+[0m19:36:26.896485 [warn ] [MainThread]: The selection criterion 'stg_entreprises' does not match any enabled nodes
+[0m19:36:26.897108 [info ] [MainThread]: 
+[0m19:36:26.897418 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m19:36:26.898884 [debug] [MainThread]: Command end result
+[0m19:36:26.923131 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.40406555, "process_user_time": 1.167854, "process_kernel_time": 0.096317, "process_mem_max_rss": "103088", "process_out_blocks": "1944", "process_in_blocks": "0"}
+[0m19:36:26.923654 [debug] [MainThread]: Command `dbt run` succeeded at 19:36:26.923557 after 0.40 seconds
+[0m19:36:26.924029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41877503a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4183e86dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4183c72280>]}
+[0m19:36:26.924393 [debug] [MainThread]: Flushing usage events
+[0m19:36:27.293229 [debug] [MainThread]: An error was encountered while trying to flush usage events

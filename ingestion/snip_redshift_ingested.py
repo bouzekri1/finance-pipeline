@@ -15,11 +15,11 @@ try:
         password=os.getenv('REDSHIFT_PASSWORD')
     )
     cursor = conn.cursor()
-    cursor.execute("SELECT COUNT(*) FROM entreprises")
-    count = cursor.fetchone()
-    print(f"Nombre de ligne: {count[0]}")
+    # cursor.execute("SELECT COUNT(*) FROM entreprises")
+    # count = cursor.fetchone()
+    # print(f"Nombre de ligne: {count[0]}")
 
-    cursor.execute("SELECT * FROM entreprises LIMIT 5")
+    cursor.execute("SELECT * FROM finance_marts.mart_par_annee")
     rows=cursor.fetchall()
     for row in rows:
         print(row)

@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import boto3
 import io
 import pandas as pd
+from datetime import datetime
 
 
 
@@ -51,11 +52,12 @@ try:
     ")")
     conn.commit()
     
+    now = datetime.now()
     for secteur in secteurs:
         
         obj = s3.get_object(
         Bucket=os.getenv("S3_BUCKET_NAME"),
-        Key=f"sirene/{secteur}/year=2026/month=04/day=05/entreprises.parquet"
+        Key=f"sirene/{secteur}/year={now.year}/month={now.month:02d}/day={now.day:02d}/entreprises.parquet"
         )
 
         df = pd.read_parquet(io.BytesIO(obj["Body"].read()))

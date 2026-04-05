@@ -1,5 +1,5 @@
 WITH entreprises AS (
-    SELECT * FROM {{ ref('stg_entreprises') }}
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
 
 )
 
@@ -10,4 +10,3 @@ SELECT
     COUNT(CASE WHEN tranche_effectifs IS NULL THEN 1 END) AS nb_sans_effectifs
 FROM entreprises
 GROUP BY activite_principale
-ORDER BY annee_de_creation ASC
