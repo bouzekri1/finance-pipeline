@@ -5,6 +5,10 @@ Pipeline de données end-to-end ingérant les données d'entreprises françaises
 automatisée et transformation via dbt.
 
 ## Architecture
+
+
+<img width="1440" height="1102" alt="image" src="https://github.com/user-attachments/assets/86a6776f-9f18-448f-a610-c7bed5d1fe7e" />
+
 ```
 INSEE SIRENE API
       ↓
