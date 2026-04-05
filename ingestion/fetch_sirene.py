@@ -35,7 +35,7 @@ def fetch_entreprises(code_activite, nb=100):
         params={
             "q": f"periode(activitePrincipaleUniteLegale:{code_activite}*) AND periode(etatAdministratifUniteLegale:A)",
             "nombre": nb,
-            "champs": "siren,denominationUniteLegale,activitePrincipaleUniteLegale,trancheEffectifsUniteLegale,dateCreationUniteLegale,categorieJuridiqueUniteLegale"
+            #"champs": "siren,denominationUniteLegale,activitePrincipaleUniteLegale,trancheEffectifsUniteLegale,dateCreationUniteLegale,categorieJuridiqueUniteLegale"
         }
     )
     if response.status_code != 200:
@@ -51,16 +51,17 @@ def fetch_entreprises(code_activite, nb=100):
 
 
 def transform_to_dataframe(entreprises):
-    """Transforme la liste d'entreprises en DataFrame"""
     records = []
     for e in entreprises:
+        # récupérer la période courante (index 0)
+        periode = e.get("periodesUniteLegale", [{}])[0]
         records.append({
             "siren": e.get("siren"),
-            "denomination": e.get("denominationUniteLegale"),
-            "activite_principale": e.get("activitePrincipaleUniteLegale"),
+            "denomination": periode.get("denominationUniteLegale"),
+            "activite_principale": periode.get("activitePrincipaleUniteLegale"),
             "tranche_effectifs": e.get("trancheEffectifsUniteLegale"),
             "date_creation": e.get("dateCreationUniteLegale"),
-            "categorie_juridique": e.get("categorieJuridiqueUniteLegale"),
+            "categorie_juridique": periode.get("categorieJuridiqueUniteLegale"),
             "date_ingestion": datetime.now().strftime("%Y-%m-%d")
         })
     return pd.DataFrame(records)

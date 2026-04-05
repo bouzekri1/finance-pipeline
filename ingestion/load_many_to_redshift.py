@@ -55,7 +55,7 @@ try:
         
         obj = s3.get_object(
         Bucket=os.getenv("S3_BUCKET_NAME"),
-        Key=f"sirene/{secteur}/year=2026/month=03/day=19/entreprises.parquet"
+        Key=f"sirene/{secteur}/year=2026/month=04/day=05/entreprises.parquet"
         )
 
         df = pd.read_parquet(io.BytesIO(obj["Body"].read()))
