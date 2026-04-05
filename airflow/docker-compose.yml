@@ -1,5 +1,7 @@
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.8.1
+  build:
+    context: .
+    dockerfile: Dockerfile
   env_file:
     - ../.env
   environment:
@@ -16,6 +18,8 @@ x-airflow-common: &airflow-common
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ../ingestion:/opt/airflow/ingestion
+    - ../dbt:/opt/airflow/dbt
+    - ~/.dbt/profiles.yml:/home/airflow/.dbt/profiles.yml
   user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
   depends_on:
     postgres:
