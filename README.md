@@ -9,25 +9,7 @@ automatisée et transformation via dbt.
 
 <img width="1440" height="1102" alt="image" src="https://github.com/user-attachments/assets/86a6776f-9f18-448f-a610-c7bed5d1fe7e" />
 
-```
-INSEE SIRENE API
-      ↓
-fetch_sirene.py (Python)
-      ↓
-Amazon S3 (Parquet, partitionné par NAF/date)
-      ↓
-load_many_to_redshift.py (Python)
-      ↓
-Amazon Redshift Serverless
-      ↓
-dbt (staging → marts)
-      ↓
-finance_staging.stg_entreprises (vue)
-finance_marts.mart_par_secteur  (table)
-finance_marts.mart_par_annee    (table)
 
-Orchestration : Apache Airflow 2.8.1
-```
 
 ## Stack technique
 
@@ -36,8 +18,8 @@ Orchestration : Apache Airflow 2.8.1
 | Ingestion | Python, requests, pandas, pyarrow |
 | Stockage brut | Amazon S3 (format Parquet, partitionnement Hive) |
 | Entrepôt | Amazon Redshift Serverless |
-| Transformation | dbt 1.8.1 + dbt-redshift |
-| Orchestration | Apache Airflow 2.8.1 (Docker) |
+| Transformation | dbt + dbt-redshift |
+| Orchestration | Apache Airflow sur Docker |
 | Infrastructure | AWS IAM, S3, Redshift Serverless |
 | Versioning | Git / GitHub |
 
@@ -60,6 +42,9 @@ finance-pipeline/
 ├── ingestion/
 │   ├── fetch_sirene.py                # API INSEE → S3
 │   └── load_many_to_redshift.py       # S3 → Redshift
+    └── load_to_redshift.py            # S3 → Redshift
+    └── read_parquet.py               # Lecture du contenu d'un fichier parquet
+    └── snip_redshift_ingested.py      # Contenu d'une table ajoutée dans Redshift     
 ├── .env.example                       # Template variables d'environnement
 ├── .gitignore
 └── README.md
