@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv("/home/ing/Bureau/finance-pipeline/.env")
 
-# ── Config ────────────────────────────────────────
+# Config de l'API et AWS
 INSEE_API_KEY = os.getenv("INSEE_API_KEY")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
@@ -21,11 +21,11 @@ HEADERS = {
     "Accept": "application/json"
 }
 
-# ── Secteurs à ingérer (codes NAF) ───────────────
+# Secteurs à ingérer (codes NAF) 
 # 64 = Banques, 62 = Informatique, 47 = Commerce détail
 ACTIVITES = ["64", "62", "47"]
 
-
+#Chargement des données dans un fichier  json 
 def fetch_entreprises(code_activite, nb=100):
     """Récupère les entreprises actives pour un secteur donné"""
     print(f"  Récupération secteur NAF {code_activite}...")
@@ -39,7 +39,7 @@ def fetch_entreprises(code_activite, nb=100):
         }
     )
     if response.status_code != 200:
-        print(f"  ✗ Erreur {response.status_code} : {response.text[:100]}")
+        print(f"  Erreur {response.status_code} : {response.text[:100]}")
         return []
     data = response.json()
     total = data.get("header", {}).get("total", 0)
@@ -49,6 +49,7 @@ def fetch_entreprises(code_activite, nb=100):
 
 
 
+#Transaformation des données dans une dataframe
 
 def transform_to_dataframe(entreprises):
     records = []
@@ -66,6 +67,7 @@ def transform_to_dataframe(entreprises):
         })
     return pd.DataFrame(records)
 
+#Chargement dans S3 en format Parquet 
 def upload_to_s3(df, code_activite):
     """Upload le DataFrame en Parquet vers S3 avec partitionnement par date"""
     s3 = boto3.client(

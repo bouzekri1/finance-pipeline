@@ -16,9 +16,9 @@ try:
     )
     response = s3.list_buckets()
     buckets = [b['Name'] for b in response['Buckets']]
-    print(f"✓ S3 connecté — buckets disponibles : {buckets}")
+    print(f" S3 connecté — buckets disponibles : {buckets}")
 except Exception as e:
-    print(f"✗ S3 erreur : {e}")
+    print(f" S3 erreur : {e}")
 
 # ── Test Redshift ─────────────────────────────────
 print("\nTest connexion Redshift...")
@@ -33,10 +33,10 @@ try:
     cursor = conn.cursor()
     cursor.execute("SELECT current_database(), current_user, version()")
     row = cursor.fetchone()
-    print(f"✓ Redshift connecté")
+    print(f"  Redshift connecté")
     print(f"  Database : {row[0]}")
     print(f"  User     : {row[1]}")
     print(f"  Version  : {row[2][:50]}")
     conn.close()
 except Exception as e:
-    print(f"✗ Redshift erreur : {e}")
+    print(f" Redshift erreur : {e}")

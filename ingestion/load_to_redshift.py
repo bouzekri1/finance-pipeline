@@ -25,7 +25,7 @@ try:
     cursor = conn.cursor()
     cursor.execute("SELECT current_database(), current_user, version()")
     row = cursor.fetchone()
-    print(f"✓ Redshift connecté")
+    print(f"  Redshift connecté")
     print(f"  Database : {row[0]}")
     print(f"  User     : {row[1]}")
     print(f"  Version  : {row[2][:50]}")
@@ -66,4 +66,4 @@ try:
     conn.commit()
     conn.close()
 except Exception as e:
-    print(f"✗ Redshift erreur : {e}")
+    print(f" Redshift erreur : {e}")

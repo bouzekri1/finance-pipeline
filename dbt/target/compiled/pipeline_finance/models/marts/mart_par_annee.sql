@@ -8,3 +8,4 @@ SELECT
     COUNT(*) AS nb_entreprises
 FROM entreprises
 GROUP BY annee_de_creation
+ORDER BY annee_de_creation ASC

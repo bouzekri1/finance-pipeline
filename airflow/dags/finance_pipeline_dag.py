@@ -6,9 +6,11 @@ import sys
 import os
 sys.path.insert(0, '/opt/airflow/ingestion')
 
+#import des script de fetch api et chargement dans Redshift
 import fetch_sirene
 import load_many_to_redshift
 
+#Déclaration du DAG
 with DAG(
     dag_id="finance_pipeline",
     start_date=datetime(2026, 1, 1),

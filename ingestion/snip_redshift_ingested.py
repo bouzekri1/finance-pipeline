@@ -4,6 +4,7 @@ import redshift_connector
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv("/home/ing/Bureau/finance-pipeline/.env")
 
 try:
@@ -25,5 +26,5 @@ try:
         print(row)
     conn.close()
 except Exception as e:
-    print(f"✗ Redshift erreur : {e}")
+    print(f" Redshift erreur : {e}")
 

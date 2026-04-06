@@ -1820,3 +1820,1688 @@ drop table if exists "dev"."finance_marts"."mart_par_annee__dbt_backup" cascade
 [0m21:00:16.841856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94f2788430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94f25a8bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94edb42190>]}
 [0m21:00:16.842261 [debug] [MainThread]: Flushing usage events
 [0m21:00:17.230407 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:57:36.499426 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:57:36.504876 | 6193aa37-7976-43c8-9ba8-c34123b86f34 ==============================
+[0m19:57:36.504876 [info ] [MainThread]: Running with dbt=1.8.1
+[0m19:57:36.505634 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:57:36.515488 [info ] [MainThread]: dbt version: 1.8.1
+[0m19:57:36.516181 [info ] [MainThread]: python version: 3.8.18
+[0m19:57:36.516651 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:57:36.517103 [info ] [MainThread]: os info: Linux-5.15.0-139-generic-x86_64-with-glibc2.34
+[0m19:57:36.599538 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m19:57:36.599998 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m19:57:36.644062 [info ] [MainThread]: Using profiles dir at /home/airflow/.dbt
+[0m19:57:36.644873 [info ] [MainThread]: Using profiles.yml file at /home/airflow/.dbt/profiles.yml
+[0m19:57:36.646139 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m19:57:36.647684 [info ] [MainThread]: adapter type: redshift
+[0m19:57:36.648873 [info ] [MainThread]: adapter version: 1.8.1
+[0m19:57:36.787477 [info ] [MainThread]: Configuration:
+[0m19:57:36.788251 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:57:36.788767 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:57:36.789261 [info ] [MainThread]: Required dependencies:
+[0m19:57:36.789767 [debug] [MainThread]: Executing "git --help"
+[0m19:57:36.797099 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:57:36.798575 [info ] [MainThread]: Connection:
+[0m19:57:36.800410 [info ] [MainThread]:   host: finance-pipeline-workgroup.075313985707.us-east-1.redshift-serverless.amazonaws.com
+[0m19:57:36.801271 [info ] [MainThread]:   user: admin
+[0m19:57:36.802043 [info ] [MainThread]:   port: 5439
+[0m19:57:36.802802 [info ] [MainThread]:   database: dev
+[0m19:57:36.803569 [info ] [MainThread]:   method: database
+[0m19:57:36.804334 [info ] [MainThread]:   cluster_id: None
+[0m19:57:36.805144 [info ] [MainThread]:   iam_profile: None
+[0m19:57:36.805940 [info ] [MainThread]:   schema: finance
+[0m19:57:36.806674 [info ] [MainThread]:   sslmode: prefer
+[0m19:57:36.807405 [info ] [MainThread]:   region: None
+[0m19:57:36.808107 [info ] [MainThread]:   sslmode: prefer
+[0m19:57:36.808819 [info ] [MainThread]:   region: None
+[0m19:57:36.809514 [info ] [MainThread]:   iam_profile: None
+[0m19:57:36.810209 [info ] [MainThread]:   autocreate: False
+[0m19:57:36.810910 [info ] [MainThread]:   db_groups: []
+[0m19:57:36.811612 [info ] [MainThread]:   ra3_node: False
+[0m19:57:36.812300 [info ] [MainThread]:   connect_timeout: None
+[0m19:57:36.812993 [info ] [MainThread]:   role: None
+[0m19:57:36.813666 [info ] [MainThread]:   retries: 1
+[0m19:57:36.815133 [info ] [MainThread]:   autocommit: True
+[0m19:57:36.816129 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m19:57:36.830409 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m19:57:36.840660 [debug] [MainThread]: Using redshift connection "debug"
+[0m19:57:36.841609 [debug] [MainThread]: On debug: select 1 as id
+[0m19:57:36.842185 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:36.849310 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m19:57:36.851586 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m19:57:38.010385 [debug] [MainThread]: SQL status: SUCCESS in 1.168 seconds
+[0m19:57:38.013358 [debug] [MainThread]: On debug: Close
+[0m19:57:38.014634 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:57:38.015775 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:57:38.016695 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m19:57:38.018783 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.5699009, "process_user_time": 1.552673, "process_kernel_time": 0.108326, "process_mem_max_rss": "105656", "process_in_blocks": "768", "process_out_blocks": "16", "command_success": false}
+[0m19:57:38.019940 [debug] [MainThread]: Command `dbt debug` failed at 19:57:38.019842 after 1.57 seconds
+[0m19:57:38.020577 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:57:38.020918 [debug] [MainThread]: Flushing usage events
+[0m20:00:55.121530 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:00:55.140223 | 9742de1b-b89b-4de4-a822-dd0f7df600a7 ==============================
+[0m20:00:55.140223 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:00:55.140774 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:00:55.146355 [info ] [MainThread]: dbt version: 1.8.1
+[0m20:00:55.146729 [info ] [MainThread]: python version: 3.8.18
+[0m20:00:55.147066 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m20:00:55.147404 [info ] [MainThread]: os info: Linux-5.15.0-139-generic-x86_64-with-glibc2.34
+[0m20:00:55.207843 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:00:55.208293 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:00:55.243920 [info ] [MainThread]: Using profiles dir at /home/airflow/.dbt
+[0m20:00:55.244395 [info ] [MainThread]: Using profiles.yml file at /home/airflow/.dbt/profiles.yml
+[0m20:00:55.244750 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m20:00:55.245232 [info ] [MainThread]: adapter type: redshift
+[0m20:00:55.245567 [info ] [MainThread]: adapter version: 1.8.1
+[0m20:00:55.324983 [info ] [MainThread]: Configuration:
+[0m20:00:55.325733 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:00:55.326215 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:00:55.326663 [info ] [MainThread]: Required dependencies:
+[0m20:00:55.327188 [debug] [MainThread]: Executing "git --help"
+[0m20:00:55.332490 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:00:55.333131 [debug] [MainThread]: STDERR: "b''"
+[0m20:00:55.333464 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:00:55.333785 [info ] [MainThread]: Connection:
+[0m20:00:55.334121 [info ] [MainThread]:   host: finance-pipeline-workgroup.075313985707.us-east-1.redshift-serverless.amazonaws.com
+[0m20:00:55.334399 [info ] [MainThread]:   user: admin
+[0m20:00:55.334683 [info ] [MainThread]:   port: 5439
+[0m20:00:55.334962 [info ] [MainThread]:   database: dev
+[0m20:00:55.335251 [info ] [MainThread]:   method: database
+[0m20:00:55.335535 [info ] [MainThread]:   cluster_id: None
+[0m20:00:55.335820 [info ] [MainThread]:   iam_profile: None
+[0m20:00:55.336108 [info ] [MainThread]:   schema: finance
+[0m20:00:55.336387 [info ] [MainThread]:   sslmode: prefer
+[0m20:00:55.336664 [info ] [MainThread]:   region: None
+[0m20:00:55.336943 [info ] [MainThread]:   sslmode: prefer
+[0m20:00:55.337221 [info ] [MainThread]:   region: None
+[0m20:00:55.337496 [info ] [MainThread]:   iam_profile: None
+[0m20:00:55.337771 [info ] [MainThread]:   autocreate: False
+[0m20:00:55.338049 [info ] [MainThread]:   db_groups: []
+[0m20:00:55.338329 [info ] [MainThread]:   ra3_node: False
+[0m20:00:55.338604 [info ] [MainThread]:   connect_timeout: None
+[0m20:00:55.338879 [info ] [MainThread]:   role: None
+[0m20:00:55.339155 [info ] [MainThread]:   retries: 1
+[0m20:00:55.339461 [info ] [MainThread]:   autocommit: True
+[0m20:00:55.340077 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:00:55.344477 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m20:00:55.350772 [debug] [MainThread]: Using redshift connection "debug"
+[0m20:00:55.351218 [debug] [MainThread]: On debug: select 1 as id
+[0m20:00:55.351537 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:00:55.356490 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:00:55.358110 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:00:56.516579 [debug] [MainThread]: SQL status: SUCCESS in 1.165 seconds
+[0m20:00:56.520876 [debug] [MainThread]: On debug: Close
+[0m20:00:56.522257 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:00:56.523345 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:00:56.526305 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.445409, "process_user_time": 1.348342, "process_kernel_time": 0.183502, "process_mem_max_rss": "105744", "process_out_blocks": "2856", "process_in_blocks": "0"}
+[0m20:00:56.527984 [debug] [MainThread]: Command `dbt debug` succeeded at 20:00:56.527707 after 1.45 seconds
+[0m20:00:56.528913 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:00:56.529807 [debug] [MainThread]: Flushing usage events
+[0m20:01:36.410112 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:01:36.414985 | 548dc8a5-37e5-4ba0-b2e0-2421f39987f0 ==============================
+[0m20:01:36.414985 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:01:36.415508 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/airflow/.dbt', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:01:36.478922 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:01:36.479525 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:01:36.666272 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:01:36.681483 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m20:01:36.782919 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:01:36.783388 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:01:36.879875 [error] [MainThread]: Encountered an error:
+[Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+[0m20:01:36.881110 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 320, in wrapper
+    ctx.obj["manifest"] = parse_manifest(
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 1905, in parse_manifest
+    write_manifest(manifest, runtime_config.project_target_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 1884, in write_manifest
+    manifest.write(path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/contracts/graph/manifest.py", line 1161, in write
+    self.writable_manifest().write(path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/artifacts/schemas/base.py", line 37, in write
+    write_json(path, self.to_dict(omit_none=False, context={"artifact": True}))  # type: ignore
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt_common/clients/system.py", line 305, in write_json
+    with open(path, "w", encoding="utf-8") as f:
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+
+[0m20:01:36.882002 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.51612896, "process_user_time": 1.479568, "process_kernel_time": 0.048378, "process_mem_max_rss": "107464", "process_in_blocks": "1024", "process_out_blocks": "16", "command_success": false}
+[0m20:01:36.882574 [debug] [MainThread]: Command `dbt run` failed at 20:01:36.882479 after 0.52 seconds
+[0m20:01:36.882965 [debug] [MainThread]: Flushing usage events
+[0m20:02:49.318696 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:02:49.324199 | 23c03acb-536b-4f34-bd7f-f74241bb3372 ==============================
+[0m20:02:49.324199 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:02:49.324807 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'profiles_dir': '/home/airflow/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:02:49.388744 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:02:49.389280 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:02:49.560844 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:02:49.576690 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m20:02:49.677366 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:02:49.677773 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:02:49.792495 [info ] [MainThread]: Found 3 models, 1 source, 489 macros
+[0m20:02:49.793801 [info ] [MainThread]: 
+[0m20:02:49.794376 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m20:02:49.798199 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m20:02:49.815532 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:02:49.816036 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:02:49.816353 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:02:49.820201 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:02:49.821390 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:02:50.950355 [debug] [ThreadPool]: SQL status: SUCCESS in 1.134 seconds
+[0m20:02:50.954188 [debug] [ThreadPool]: On list_dev: Close
+[0m20:02:50.963595 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:02:50.964540 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:02:50.965172 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:02:50.966067 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:02:50.966789 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:02:52.042939 [debug] [ThreadPool]: SQL status: SUCCESS in 1.078 seconds
+[0m20:02:52.046530 [debug] [ThreadPool]: On list_dev: Close
+[0m20:02:52.050704 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_finance_staging)
+[0m20:02:52.071033 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:02:52.071510 [debug] [ThreadPool]: On list_dev_finance_staging: BEGIN
+[0m20:02:52.071812 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:02:52.072274 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:02:52.072586 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:03:03.882126 [debug] [ThreadPool]: SQL status: SUCCESS in 11.810 seconds
+[0m20:03:03.883352 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:03:03.884473 [debug] [ThreadPool]: On list_dev_finance_staging: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_staging"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_staging'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_staging'
+[0m20:03:04.095108 [debug] [ThreadPool]: SQL status: SUCCESS in 0.209 seconds
+[0m20:03:04.096906 [debug] [ThreadPool]: On list_dev_finance_staging: ROLLBACK
+[0m20:03:04.272240 [debug] [ThreadPool]: On list_dev_finance_staging: Close
+[0m20:03:04.273250 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_finance_staging, now list_dev_finance_marts)
+[0m20:03:04.281132 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:03:04.281838 [debug] [ThreadPool]: On list_dev_finance_marts: BEGIN
+[0m20:03:04.282343 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:03:04.283231 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:03:04.283662 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:03:05.509342 [debug] [ThreadPool]: SQL status: SUCCESS in 1.227 seconds
+[0m20:03:05.510603 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:03:05.511881 [debug] [ThreadPool]: On list_dev_finance_marts: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_marts"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_marts'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_marts'
+[0m20:03:05.734031 [debug] [ThreadPool]: SQL status: SUCCESS in 0.221 seconds
+[0m20:03:05.737726 [debug] [ThreadPool]: On list_dev_finance_marts: ROLLBACK
+[0m20:03:05.928865 [debug] [ThreadPool]: On list_dev_finance_marts: Close
+[0m20:03:05.950786 [debug] [MainThread]: Using redshift connection "master"
+[0m20:03:05.951378 [debug] [MainThread]: On master: BEGIN
+[0m20:03:05.951786 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:03:05.952429 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:03:05.952885 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:03:06.956882 [debug] [MainThread]: SQL status: SUCCESS in 1.005 seconds
+[0m20:03:06.958075 [debug] [MainThread]: Using redshift connection "master"
+[0m20:03:06.959222 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m20:03:07.187635 [debug] [MainThread]: SQL status: SUCCESS in 0.227 seconds
+[0m20:03:07.188919 [debug] [MainThread]: On master: ROLLBACK
+[0m20:03:07.364039 [debug] [MainThread]: Using redshift connection "master"
+[0m20:03:07.365950 [debug] [MainThread]: On master: BEGIN
+[0m20:03:07.455420 [debug] [MainThread]: SQL status: SUCCESS in 0.088 seconds
+[0m20:03:07.456656 [debug] [MainThread]: On master: COMMIT
+[0m20:03:07.457857 [debug] [MainThread]: Using redshift connection "master"
+[0m20:03:07.458747 [debug] [MainThread]: On master: COMMIT
+[0m20:03:07.630011 [debug] [MainThread]: SQL status: SUCCESS in 0.170 seconds
+[0m20:03:07.631158 [debug] [MainThread]: On master: Close
+[0m20:03:07.632796 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:03:07.633979 [info ] [MainThread]: 
+[0m20:03:07.649444 [debug] [Thread-1  ]: Began running node model.pipeline_finance.stg_entreprises
+[0m20:03:07.650249 [info ] [Thread-1  ]: 1 of 3 START sql view model finance_staging.stg_entreprises .................... [RUN]
+[0m20:03:07.650958 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_finance_marts, now model.pipeline_finance.stg_entreprises)
+[0m20:03:07.651501 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.stg_entreprises
+[0m20:03:07.656884 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.stg_entreprises"
+[0m20:03:07.658025 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.stg_entreprises
+[0m20:03:07.693988 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.stg_entreprises"
+[0m20:03:07.697819 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:07.698363 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:03:07.698733 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:03:07.699273 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:03:07.699665 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:03:08.720109 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.021 seconds
+[0m20:03:08.721376 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:08.722476 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+
+
+  create view "dev"."finance_staging"."stg_entreprises__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "dev"."public"."entreprises"
+),
+
+cleaned AS (
+    SELECT
+        siren,
+        denomination,
+        activite_principale,
+        NULLIF(tranche_effectifs, 'NN') AS tranche_effectifs,
+        CAST(date_creation AS DATE)     AS date_creation,
+        categorie_juridique,
+        CAST(date_ingestion AS DATE)    AS date_ingestion
+        FROM source
+        WHERE siren IS NOT NULL 
+)
+
+SELECT * FROM cleaned
+  ) ;
+[0m20:03:09.262474 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.539 seconds
+[0m20:03:09.328222 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:09.328667 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises" rename to "stg_entreprises__dbt_backup"
+[0m20:03:09.583776 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.255 seconds
+[0m20:03:09.588309 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:09.588753 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises__dbt_tmp" rename to "stg_entreprises"
+[0m20:03:09.841210 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.252 seconds
+[0m20:03:09.869649 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:03:09.870192 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:09.870548 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:03:15.669122 [debug] [Thread-1  ]: SQL status: SUCCESS in 5.798 seconds
+[0m20:03:15.671379 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:15.673043 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:03:15.847994 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.174 seconds
+[0m20:03:15.861055 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_staging"."stg_entreprises__dbt_backup"
+[0m20:03:15.865817 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:15.866267 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+drop view if exists "dev"."finance_staging"."stg_entreprises__dbt_backup" cascade
+[0m20:03:16.041206 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.174 seconds
+[0m20:03:16.044099 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:03:16.045515 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:16.046603 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:03:17.718372 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.670 seconds
+[0m20:03:17.719979 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:03:17.721111 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:03:17.807155 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.085 seconds
+[0m20:03:17.812374 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: ROLLBACK
+[0m20:03:17.986540 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: Close
+[0m20:03:17.991940 [info ] [Thread-1  ]: 1 of 3 OK created sql view model finance_staging.stg_entreprises ............... [[32mSUCCESS[0m in 10.34s]
+[0m20:03:17.993851 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.stg_entreprises
+[0m20:03:17.995998 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_annee
+[0m20:03:17.997606 [info ] [Thread-1  ]: 2 of 3 START sql table model finance_marts.mart_par_annee ...................... [RUN]
+[0m20:03:17.998379 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.stg_entreprises, now model.pipeline_finance.mart_par_annee)
+[0m20:03:17.998783 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_annee
+[0m20:03:18.001992 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_annee"
+[0m20:03:18.002590 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_annee
+[0m20:03:18.031617 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_annee"
+[0m20:03:18.033303 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:18.033709 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:03:18.034066 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:03:18.034578 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:03:18.034955 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:03:19.126943 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.093 seconds
+[0m20:03:19.128302 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:19.129680 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_annee__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+SELECT
+    EXTRACT(YEAR FROM date_creation) AS annee_de_creation,
+    COUNT(*) AS nb_entreprises
+FROM entreprises
+GROUP BY annee_de_creation
+  );
+[0m20:03:46.140528 [debug] [Thread-1  ]: SQL status: SUCCESS in 27.010 seconds
+[0m20:03:46.144984 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:46.145411 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee" rename to "mart_par_annee__dbt_backup"
+[0m20:03:46.965669 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.820 seconds
+[0m20:03:46.977223 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:46.978358 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee__dbt_tmp" rename to "mart_par_annee"
+[0m20:03:47.348468 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.369 seconds
+[0m20:03:47.362988 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:03:47.364108 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:47.364774 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:03:58.062033 [debug] [Thread-1  ]: SQL status: SUCCESS in 10.696 seconds
+[0m20:03:58.064048 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:58.065274 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:03:58.246275 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.180 seconds
+[0m20:03:58.254922 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_annee__dbt_backup"
+[0m20:03:58.262040 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:03:58.262860 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+drop table if exists "dev"."finance_marts"."mart_par_annee__dbt_backup" cascade
+[0m20:04:00.624237 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.360 seconds
+[0m20:04:00.627129 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:04:00.628589 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:04:00.629752 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:04:41.172504 [debug] [Thread-1  ]: SQL status: SUCCESS in 40.542 seconds
+[0m20:04:41.174138 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:04:41.175387 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:04:41.266429 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.090 seconds
+[0m20:04:41.268884 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: ROLLBACK
+[0m20:04:41.453056 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: Close
+[0m20:04:41.455707 [info ] [Thread-1  ]: 2 of 3 OK created sql table model finance_marts.mart_par_annee ................. [[32mSUCCESS[0m in 83.46s]
+[0m20:04:41.457471 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_annee
+[0m20:04:41.458686 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_secteur
+[0m20:04:41.460031 [info ] [Thread-1  ]: 3 of 3 START sql table model finance_marts.mart_par_secteur .................... [RUN]
+[0m20:04:41.461603 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.mart_par_annee, now model.pipeline_finance.mart_par_secteur)
+[0m20:04:41.462898 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_secteur
+[0m20:04:41.470497 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_secteur"
+[0m20:04:41.471519 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_secteur
+[0m20:04:41.478057 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_secteur"
+[0m20:04:41.479972 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:04:41.480324 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:04:41.480626 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:04:41.481054 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:04:41.481371 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:04:42.586236 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.105 seconds
+[0m20:04:42.587680 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:04:42.588906 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_secteur__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+
+SELECT
+    activite_principale,
+    COUNT(*) AS nb_entreprises,
+    COUNT(CASE WHEN tranche_effectifs IS NULL THEN 1 END) AS nb_sans_effectifs
+FROM entreprises
+GROUP BY activite_principale
+ORDER BY annee_de_creation ASC
+  );
+[0m20:04:42.687299 [debug] [Thread-1  ]: Redshift adapter: Redshift error: column "annee_de_creation" does not exist in entreprises
+[0m20:04:42.688664 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: ROLLBACK
+[0m20:04:42.875984 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: Close
+[0m20:04:42.881300 [debug] [Thread-1  ]: Database Error in model mart_par_secteur (models/marts/mart_par_secteur.sql)
+  column "annee_de_creation" does not exist in entreprises
+  compiled code at target/run/pipeline_finance/models/marts/mart_par_secteur.sql
+[0m20:04:42.883950 [error] [Thread-1  ]: 3 of 3 ERROR creating sql table model finance_marts.mart_par_secteur ........... [[31mERROR[0m in 1.42s]
+[0m20:04:42.885825 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_secteur
+[0m20:04:42.888972 [debug] [MainThread]: Using redshift connection "master"
+[0m20:04:42.889968 [debug] [MainThread]: On master: BEGIN
+[0m20:04:42.890897 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:04:42.892829 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:04:42.894114 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:04:43.910846 [debug] [MainThread]: SQL status: SUCCESS in 1.020 seconds
+[0m20:04:43.911318 [debug] [MainThread]: On master: COMMIT
+[0m20:04:43.911803 [debug] [MainThread]: Using redshift connection "master"
+[0m20:04:43.912171 [debug] [MainThread]: On master: COMMIT
+[0m20:04:44.080653 [debug] [MainThread]: SQL status: SUCCESS in 0.168 seconds
+[0m20:04:44.081161 [debug] [MainThread]: On master: Close
+[0m20:04:44.081789 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:04:44.082100 [debug] [MainThread]: Connection 'model.pipeline_finance.mart_par_secteur' was properly closed.
+[0m20:04:44.082486 [info ] [MainThread]: 
+[0m20:04:44.082874 [info ] [MainThread]: Finished running 1 view model, 2 table models in 0 hours 1 minutes and 54.29 seconds (114.29s).
+[0m20:04:44.083769 [debug] [MainThread]: Command end result
+[0m20:04:44.115604 [info ] [MainThread]: 
+[0m20:04:44.116126 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:04:44.116498 [info ] [MainThread]: 
+[0m20:04:44.116910 [error] [MainThread]:   Database Error in model mart_par_secteur (models/marts/mart_par_secteur.sql)
+  column "annee_de_creation" does not exist in entreprises
+  compiled code at target/run/pipeline_finance/models/marts/mart_par_secteur.sql
+[0m20:04:44.117243 [info ] [MainThread]: 
+[0m20:04:44.117568 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m20:04:44.118298 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 114.84157, "process_user_time": 2.453125, "process_kernel_time": 0.16086, "process_mem_max_rss": "116136", "process_in_blocks": "136", "process_out_blocks": "2112", "command_success": false}
+[0m20:04:44.118835 [debug] [MainThread]: Command `dbt run` failed at 20:04:44.118750 after 114.84 seconds
+[0m20:04:44.119192 [debug] [MainThread]: Flushing usage events
+[0m20:07:11.863004 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:07:11.868317 | 32e29806-15d2-4a3a-86b4-0fc8efe8512e ==============================
+[0m20:07:11.868317 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:07:11.868804 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/airflow/.dbt', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:07:11.942258 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:07:11.943092 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:07:12.117075 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:07:12.133112 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m20:07:12.236485 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m20:07:12.237068 [debug] [MainThread]: Partial parsing: updated file: pipeline_finance://models/marts/mart_par_secteur.sql
+[0m20:07:12.237454 [debug] [MainThread]: Partial parsing: updated file: pipeline_finance://models/marts/mart_par_annee.sql
+[0m20:07:12.513970 [info ] [MainThread]: Found 3 models, 1 source, 489 macros
+[0m20:07:12.515300 [info ] [MainThread]: 
+[0m20:07:12.515884 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m20:07:12.566861 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m20:07:12.581819 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:07:12.582205 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:07:12.582505 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:07:12.586289 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:12.587301 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:13.682430 [debug] [ThreadPool]: SQL status: SUCCESS in 1.100 seconds
+[0m20:07:13.686269 [debug] [ThreadPool]: On list_dev: Close
+[0m20:07:13.695528 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:07:13.696403 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:07:13.697091 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:07:13.698015 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:13.698792 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:14.793497 [debug] [ThreadPool]: SQL status: SUCCESS in 1.096 seconds
+[0m20:07:14.797355 [debug] [ThreadPool]: On list_dev: Close
+[0m20:07:14.801300 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_finance_staging)
+[0m20:07:14.820034 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:07:14.820547 [debug] [ThreadPool]: On list_dev_finance_staging: BEGIN
+[0m20:07:14.820912 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:07:14.821445 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:14.821832 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:15.904154 [debug] [ThreadPool]: SQL status: SUCCESS in 1.083 seconds
+[0m20:07:15.905362 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:07:15.906277 [debug] [ThreadPool]: On list_dev_finance_staging: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_staging"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_staging'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_staging'
+[0m20:07:16.104820 [debug] [ThreadPool]: SQL status: SUCCESS in 0.198 seconds
+[0m20:07:16.106646 [debug] [ThreadPool]: On list_dev_finance_staging: ROLLBACK
+[0m20:07:16.291114 [debug] [ThreadPool]: On list_dev_finance_staging: Close
+[0m20:07:16.292776 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_finance_staging, now list_dev_finance_marts)
+[0m20:07:16.300343 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:07:16.300767 [debug] [ThreadPool]: On list_dev_finance_marts: BEGIN
+[0m20:07:16.301057 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:07:16.301544 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:16.301871 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:17.369881 [debug] [ThreadPool]: SQL status: SUCCESS in 1.069 seconds
+[0m20:07:17.371040 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:07:17.372146 [debug] [ThreadPool]: On list_dev_finance_marts: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_marts"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_marts'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_marts'
+[0m20:07:17.574446 [debug] [ThreadPool]: SQL status: SUCCESS in 0.201 seconds
+[0m20:07:17.575910 [debug] [ThreadPool]: On list_dev_finance_marts: ROLLBACK
+[0m20:07:17.757939 [debug] [ThreadPool]: On list_dev_finance_marts: Close
+[0m20:07:17.771138 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:17.771629 [debug] [MainThread]: On master: BEGIN
+[0m20:07:17.772047 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:07:17.772663 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:17.773052 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:18.815346 [debug] [MainThread]: SQL status: SUCCESS in 1.043 seconds
+[0m20:07:18.815800 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:18.816191 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m20:07:19.035751 [debug] [MainThread]: SQL status: SUCCESS in 0.219 seconds
+[0m20:07:19.039317 [debug] [MainThread]: On master: ROLLBACK
+[0m20:07:19.212503 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:19.213675 [debug] [MainThread]: On master: BEGIN
+[0m20:07:19.305505 [debug] [MainThread]: SQL status: SUCCESS in 0.091 seconds
+[0m20:07:19.306671 [debug] [MainThread]: On master: COMMIT
+[0m20:07:19.307974 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:19.308971 [debug] [MainThread]: On master: COMMIT
+[0m20:07:19.480985 [debug] [MainThread]: SQL status: SUCCESS in 0.171 seconds
+[0m20:07:19.482252 [debug] [MainThread]: On master: Close
+[0m20:07:19.483963 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:07:19.485208 [info ] [MainThread]: 
+[0m20:07:19.500664 [debug] [Thread-1  ]: Began running node model.pipeline_finance.stg_entreprises
+[0m20:07:19.501597 [info ] [Thread-1  ]: 1 of 3 START sql view model finance_staging.stg_entreprises .................... [RUN]
+[0m20:07:19.502389 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_finance_marts, now model.pipeline_finance.stg_entreprises)
+[0m20:07:19.503003 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.stg_entreprises
+[0m20:07:19.508772 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.stg_entreprises"
+[0m20:07:19.509361 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.stg_entreprises
+[0m20:07:19.542353 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.stg_entreprises"
+[0m20:07:19.544636 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:19.545059 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:07:19.545415 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:07:19.545898 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:19.546271 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:20.766570 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.221 seconds
+[0m20:07:20.767087 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:20.767590 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+
+
+  create view "dev"."finance_staging"."stg_entreprises__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "dev"."public"."entreprises"
+),
+
+cleaned AS (
+    SELECT
+        siren,
+        denomination,
+        activite_principale,
+        NULLIF(tranche_effectifs, 'NN') AS tranche_effectifs,
+        CAST(date_creation AS DATE)     AS date_creation,
+        categorie_juridique,
+        CAST(date_ingestion AS DATE)    AS date_ingestion
+        FROM source
+        WHERE siren IS NOT NULL 
+)
+
+SELECT * FROM cleaned
+  ) ;
+[0m20:07:21.198560 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.430 seconds
+[0m20:07:21.215460 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:21.215989 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises" rename to "stg_entreprises__dbt_backup"
+[0m20:07:21.475154 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.258 seconds
+[0m20:07:21.488667 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:21.489703 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises__dbt_tmp" rename to "stg_entreprises"
+[0m20:07:21.744108 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.253 seconds
+[0m20:07:21.764927 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:07:21.765468 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:21.765809 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:07:22.452033 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.686 seconds
+[0m20:07:22.453928 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:22.455053 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:07:22.625563 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.169 seconds
+[0m20:07:22.643267 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_staging"."stg_entreprises__dbt_backup"
+[0m20:07:22.649251 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:22.649669 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+drop view if exists "dev"."finance_staging"."stg_entreprises__dbt_backup" cascade
+[0m20:07:22.826382 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.176 seconds
+[0m20:07:22.829338 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:07:22.830257 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:22.830931 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:07:23.272526 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.441 seconds
+[0m20:07:23.274070 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:07:23.275914 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:07:23.362546 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.085 seconds
+[0m20:07:23.367628 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: ROLLBACK
+[0m20:07:23.541599 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: Close
+[0m20:07:23.547360 [info ] [Thread-1  ]: 1 of 3 OK created sql view model finance_staging.stg_entreprises ............... [[32mSUCCESS[0m in 4.04s]
+[0m20:07:23.549369 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.stg_entreprises
+[0m20:07:23.551725 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_annee
+[0m20:07:23.553531 [info ] [Thread-1  ]: 2 of 3 START sql table model finance_marts.mart_par_annee ...................... [RUN]
+[0m20:07:23.554985 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.stg_entreprises, now model.pipeline_finance.mart_par_annee)
+[0m20:07:23.556117 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_annee
+[0m20:07:23.562828 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_annee"
+[0m20:07:23.564219 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_annee
+[0m20:07:23.591951 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_annee"
+[0m20:07:23.593536 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:23.593902 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:07:23.594240 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:07:23.594695 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:23.595051 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:24.617659 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.023 seconds
+[0m20:07:24.619076 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:24.620306 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_annee__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+SELECT
+    EXTRACT(YEAR FROM date_creation) AS annee_de_creation,
+    COUNT(*) AS nb_entreprises
+FROM entreprises
+GROUP BY annee_de_creation
+ORDER BY annee_de_creation ASC
+  );
+[0m20:07:25.423136 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.802 seconds
+[0m20:07:25.434308 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:25.435519 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee" rename to "mart_par_annee__dbt_backup"
+[0m20:07:25.945246 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.508 seconds
+[0m20:07:25.958253 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:25.959613 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee__dbt_tmp" rename to "mart_par_annee"
+[0m20:07:26.215911 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.255 seconds
+[0m20:07:26.229532 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:07:26.230289 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:26.230802 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:07:26.752749 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.521 seconds
+[0m20:07:26.754647 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:26.755854 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:07:26.926728 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.169 seconds
+[0m20:07:26.935455 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_annee__dbt_backup"
+[0m20:07:26.941388 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:26.942222 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+drop table if exists "dev"."finance_marts"."mart_par_annee__dbt_backup" cascade
+[0m20:07:27.116303 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.173 seconds
+[0m20:07:27.118141 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:07:27.119090 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:27.119881 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:07:27.470852 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.350 seconds
+[0m20:07:27.472562 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:07:27.473885 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:07:27.559365 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.084 seconds
+[0m20:07:27.561893 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: ROLLBACK
+[0m20:07:27.733876 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: Close
+[0m20:07:27.736494 [info ] [Thread-1  ]: 2 of 3 OK created sql table model finance_marts.mart_par_annee ................. [[32mSUCCESS[0m in 4.18s]
+[0m20:07:27.738394 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_annee
+[0m20:07:27.739638 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_secteur
+[0m20:07:27.741359 [info ] [Thread-1  ]: 3 of 3 START sql table model finance_marts.mart_par_secteur .................... [RUN]
+[0m20:07:27.742950 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.mart_par_annee, now model.pipeline_finance.mart_par_secteur)
+[0m20:07:27.744303 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_secteur
+[0m20:07:27.750263 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_secteur"
+[0m20:07:27.751031 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_secteur
+[0m20:07:27.755682 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_secteur"
+[0m20:07:27.757222 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:27.757618 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:07:27.757987 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:07:27.758488 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:27.758849 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:28.865478 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.107 seconds
+[0m20:07:28.867351 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:28.868548 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_secteur__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+
+SELECT
+    activite_principale,
+    COUNT(*) AS nb_entreprises,
+    COUNT(CASE WHEN tranche_effectifs IS NULL THEN 1 END) AS nb_sans_effectifs
+FROM entreprises
+GROUP BY activite_principale
+  );
+[0m20:07:29.176785 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.307 seconds
+[0m20:07:29.183931 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:29.184553 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur" rename to "mart_par_secteur__dbt_backup"
+[0m20:07:29.729105 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.544 seconds
+[0m20:07:29.739975 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:29.741193 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur__dbt_tmp" rename to "mart_par_secteur"
+[0m20:07:30.022334 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.280 seconds
+[0m20:07:30.025506 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:07:30.026326 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:30.026973 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:07:30.645217 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.617 seconds
+[0m20:07:30.647062 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:30.648321 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:07:30.829323 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.180 seconds
+[0m20:07:30.839841 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_secteur__dbt_backup"
+[0m20:07:30.842876 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:30.843781 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+drop table if exists "dev"."finance_marts"."mart_par_secteur__dbt_backup" cascade
+[0m20:07:31.030750 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.186 seconds
+[0m20:07:31.033494 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:07:31.034914 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:31.036031 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:07:31.466423 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.429 seconds
+[0m20:07:31.467987 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:07:31.469056 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:07:31.564892 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.095 seconds
+[0m20:07:31.567498 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: ROLLBACK
+[0m20:07:31.750145 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: Close
+[0m20:07:31.752199 [info ] [Thread-1  ]: 3 of 3 OK created sql table model finance_marts.mart_par_secteur ............... [[32mSUCCESS[0m in 4.01s]
+[0m20:07:31.753800 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_secteur
+[0m20:07:31.756636 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:31.757646 [debug] [MainThread]: On master: BEGIN
+[0m20:07:31.758602 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:07:31.759913 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:07:31.760995 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:07:32.770286 [debug] [MainThread]: SQL status: SUCCESS in 1.012 seconds
+[0m20:07:32.771511 [debug] [MainThread]: On master: COMMIT
+[0m20:07:32.772646 [debug] [MainThread]: Using redshift connection "master"
+[0m20:07:32.773477 [debug] [MainThread]: On master: COMMIT
+[0m20:07:32.944037 [debug] [MainThread]: SQL status: SUCCESS in 0.169 seconds
+[0m20:07:32.945389 [debug] [MainThread]: On master: Close
+[0m20:07:32.946828 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:07:32.947547 [debug] [MainThread]: Connection 'model.pipeline_finance.mart_par_secteur' was properly closed.
+[0m20:07:32.948279 [info ] [MainThread]: 
+[0m20:07:32.948997 [info ] [MainThread]: Finished running 1 view model, 2 table models in 0 hours 0 minutes and 20.43 seconds (20.43s).
+[0m20:07:32.950533 [debug] [MainThread]: Command end result
+[0m20:07:32.981482 [info ] [MainThread]: 
+[0m20:07:32.982025 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:07:32.982407 [info ] [MainThread]: 
+[0m20:07:32.982766 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m20:07:32.983583 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 21.161741, "process_user_time": 2.558129, "process_kernel_time": 0.251423, "process_mem_max_rss": "120080", "process_out_blocks": "3080", "process_in_blocks": "0"}
+[0m20:07:32.984142 [debug] [MainThread]: Command `dbt run` succeeded at 20:07:32.984053 after 21.16 seconds
+[0m20:07:32.984514 [debug] [MainThread]: Flushing usage events
+[0m20:11:21.205429 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:11:21.210533 | 10e63b7e-8820-4af2-9fe8-922836e8de66 ==============================
+[0m20:11:21.210533 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:11:21.211032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/airflow/.dbt', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:11:21.274868 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:11:21.276339 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:11:21.480347 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:11:21.498238 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m20:11:21.607542 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:11:21.608006 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:11:21.726227 [info ] [MainThread]: Found 3 models, 1 source, 489 macros
+[0m20:11:21.727603 [info ] [MainThread]: 
+[0m20:11:21.728240 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m20:11:21.732680 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m20:11:21.750069 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:11:21.750531 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:11:21.750858 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:11:21.755263 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:21.756643 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:22.915689 [debug] [ThreadPool]: SQL status: SUCCESS in 1.165 seconds
+[0m20:11:22.917243 [debug] [ThreadPool]: On list_dev: Close
+[0m20:11:22.921580 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:11:22.922910 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:11:22.923586 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:22.924342 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:22.924812 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:24.151613 [debug] [ThreadPool]: SQL status: SUCCESS in 1.228 seconds
+[0m20:11:24.154783 [debug] [ThreadPool]: On list_dev: Close
+[0m20:11:24.158100 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_finance_staging)
+[0m20:11:24.166618 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:11:24.166985 [debug] [ThreadPool]: On list_dev_finance_staging: BEGIN
+[0m20:11:24.167335 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:24.167781 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:24.168070 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:25.183055 [debug] [ThreadPool]: SQL status: SUCCESS in 1.016 seconds
+[0m20:11:25.183610 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:11:25.184120 [debug] [ThreadPool]: On list_dev_finance_staging: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_staging"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_staging'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_staging'
+[0m20:11:25.369182 [debug] [ThreadPool]: SQL status: SUCCESS in 0.184 seconds
+[0m20:11:25.373050 [debug] [ThreadPool]: On list_dev_finance_staging: ROLLBACK
+[0m20:11:25.544517 [debug] [ThreadPool]: On list_dev_finance_staging: Close
+[0m20:11:25.546177 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_finance_staging, now list_dev_finance_marts)
+[0m20:11:25.555853 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:11:25.556521 [debug] [ThreadPool]: On list_dev_finance_marts: BEGIN
+[0m20:11:25.556847 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:25.557332 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:25.557695 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:26.584513 [debug] [ThreadPool]: SQL status: SUCCESS in 1.028 seconds
+[0m20:11:26.585212 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:11:26.585775 [debug] [ThreadPool]: On list_dev_finance_marts: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_marts"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_marts'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_marts'
+[0m20:11:26.773721 [debug] [ThreadPool]: SQL status: SUCCESS in 0.187 seconds
+[0m20:11:26.775689 [debug] [ThreadPool]: On list_dev_finance_marts: ROLLBACK
+[0m20:11:26.950735 [debug] [ThreadPool]: On list_dev_finance_marts: Close
+[0m20:11:26.969089 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:26.969511 [debug] [MainThread]: On master: BEGIN
+[0m20:11:26.969827 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:11:26.970325 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:26.970662 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:28.076914 [debug] [MainThread]: SQL status: SUCCESS in 1.107 seconds
+[0m20:11:28.078162 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:28.079340 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m20:11:28.313996 [debug] [MainThread]: SQL status: SUCCESS in 0.233 seconds
+[0m20:11:28.317004 [debug] [MainThread]: On master: ROLLBACK
+[0m20:11:28.512076 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:28.513264 [debug] [MainThread]: On master: BEGIN
+[0m20:11:28.609654 [debug] [MainThread]: SQL status: SUCCESS in 0.095 seconds
+[0m20:11:28.610741 [debug] [MainThread]: On master: COMMIT
+[0m20:11:28.611776 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:28.612449 [debug] [MainThread]: On master: COMMIT
+[0m20:11:28.792485 [debug] [MainThread]: SQL status: SUCCESS in 0.179 seconds
+[0m20:11:28.793815 [debug] [MainThread]: On master: Close
+[0m20:11:28.795653 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:11:28.796809 [info ] [MainThread]: 
+[0m20:11:28.811940 [debug] [Thread-1  ]: Began running node model.pipeline_finance.stg_entreprises
+[0m20:11:28.812864 [info ] [Thread-1  ]: 1 of 3 START sql view model finance_staging.stg_entreprises .................... [RUN]
+[0m20:11:28.813620 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_finance_marts, now model.pipeline_finance.stg_entreprises)
+[0m20:11:28.814215 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.stg_entreprises
+[0m20:11:28.822123 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.stg_entreprises"
+[0m20:11:28.823665 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.stg_entreprises
+[0m20:11:28.858018 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.stg_entreprises"
+[0m20:11:28.861649 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:28.862053 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:28.862393 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:28.862884 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:28.863243 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:30.008935 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.146 seconds
+[0m20:11:30.009729 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:30.010469 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+
+
+  create view "dev"."finance_staging"."stg_entreprises__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "dev"."public"."entreprises"
+),
+
+cleaned AS (
+    SELECT
+        siren,
+        denomination,
+        activite_principale,
+        NULLIF(tranche_effectifs, 'NN') AS tranche_effectifs,
+        CAST(date_creation AS DATE)     AS date_creation,
+        categorie_juridique,
+        CAST(date_ingestion AS DATE)    AS date_ingestion
+        FROM source
+        WHERE siren IS NOT NULL 
+)
+
+SELECT * FROM cleaned
+  ) ;
+[0m20:11:30.438710 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.427 seconds
+[0m20:11:30.495322 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:30.495774 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises" rename to "stg_entreprises__dbt_backup"
+[0m20:11:30.752729 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.256 seconds
+[0m20:11:30.764033 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:30.765005 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises__dbt_tmp" rename to "stg_entreprises"
+[0m20:11:31.030447 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.265 seconds
+[0m20:11:31.057487 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:31.058225 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:31.058810 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:31.572372 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.513 seconds
+[0m20:11:31.573498 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:31.574184 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:31.742923 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.168 seconds
+[0m20:11:31.758839 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_staging"."stg_entreprises__dbt_backup"
+[0m20:11:31.765574 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:31.766188 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+drop view if exists "dev"."finance_staging"."stg_entreprises__dbt_backup" cascade
+[0m20:11:31.938498 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.172 seconds
+[0m20:11:31.940980 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:31.941840 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:31.942397 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:32.311785 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.369 seconds
+[0m20:11:32.313463 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:32.314622 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:32.403476 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.087 seconds
+[0m20:11:32.408812 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: ROLLBACK
+[0m20:11:32.579451 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: Close
+[0m20:11:32.582303 [info ] [Thread-1  ]: 1 of 3 OK created sql view model finance_staging.stg_entreprises ............... [[32mSUCCESS[0m in 3.77s]
+[0m20:11:32.583405 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.stg_entreprises
+[0m20:11:32.584662 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_annee
+[0m20:11:32.585205 [info ] [Thread-1  ]: 2 of 3 START sql table model finance_marts.mart_par_annee ...................... [RUN]
+[0m20:11:32.585689 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.stg_entreprises, now model.pipeline_finance.mart_par_annee)
+[0m20:11:32.586051 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_annee
+[0m20:11:32.588998 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_annee"
+[0m20:11:32.589555 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_annee
+[0m20:11:32.617749 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_annee"
+[0m20:11:32.619428 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:32.619820 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:32.620155 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:32.620644 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:32.621011 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:33.708370 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.088 seconds
+[0m20:11:33.709168 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:33.709804 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_annee__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+SELECT
+    EXTRACT(YEAR FROM date_creation) AS annee_de_creation,
+    COUNT(*) AS nb_entreprises
+FROM entreprises
+GROUP BY annee_de_creation
+ORDER BY annee_de_creation ASC
+  );
+[0m20:11:34.115559 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.405 seconds
+[0m20:11:34.119846 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:34.120388 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee" rename to "mart_par_annee__dbt_backup"
+[0m20:11:34.663360 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.542 seconds
+[0m20:11:34.673723 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:34.674777 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee__dbt_tmp" rename to "mart_par_annee"
+[0m20:11:34.947267 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.271 seconds
+[0m20:11:34.963074 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:34.963910 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:34.964422 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:35.482577 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.517 seconds
+[0m20:11:35.483911 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:35.484716 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:35.689938 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.204 seconds
+[0m20:11:35.698776 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_annee__dbt_backup"
+[0m20:11:35.705554 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:35.706259 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+drop table if exists "dev"."finance_marts"."mart_par_annee__dbt_backup" cascade
+[0m20:11:35.890724 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.184 seconds
+[0m20:11:35.891850 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:35.892376 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:35.892801 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:36.405558 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.512 seconds
+[0m20:11:36.407393 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:36.408551 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:36.499049 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.089 seconds
+[0m20:11:36.501909 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: ROLLBACK
+[0m20:11:36.686064 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: Close
+[0m20:11:36.690172 [info ] [Thread-1  ]: 2 of 3 OK created sql table model finance_marts.mart_par_annee ................. [[32mSUCCESS[0m in 4.10s]
+[0m20:11:36.693310 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_annee
+[0m20:11:36.695353 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_secteur
+[0m20:11:36.697350 [info ] [Thread-1  ]: 3 of 3 START sql table model finance_marts.mart_par_secteur .................... [RUN]
+[0m20:11:36.698861 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.mart_par_annee, now model.pipeline_finance.mart_par_secteur)
+[0m20:11:36.700180 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_secteur
+[0m20:11:36.707202 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_secteur"
+[0m20:11:36.707801 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_secteur
+[0m20:11:36.711923 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_secteur"
+[0m20:11:36.713493 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:36.713891 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:11:36.714224 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:36.714707 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:36.715079 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:37.749823 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.035 seconds
+[0m20:11:37.751322 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:37.752709 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_secteur__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+
+SELECT
+    activite_principale,
+    COUNT(*) AS nb_entreprises,
+    COUNT(CASE WHEN tranche_effectifs IS NULL THEN 1 END) AS nb_sans_effectifs
+FROM entreprises
+GROUP BY activite_principale
+  );
+[0m20:11:38.041933 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.288 seconds
+[0m20:11:38.057251 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:38.058028 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur" rename to "mart_par_secteur__dbt_backup"
+[0m20:11:38.564039 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.505 seconds
+[0m20:11:38.575959 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:38.577167 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur__dbt_tmp" rename to "mart_par_secteur"
+[0m20:11:38.832195 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.254 seconds
+[0m20:11:38.834824 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:11:38.835438 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:38.835813 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:11:39.271388 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.435 seconds
+[0m20:11:39.272134 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:39.272525 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:11:39.445941 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.173 seconds
+[0m20:11:39.450203 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_secteur__dbt_backup"
+[0m20:11:39.451856 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:39.452278 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+drop table if exists "dev"."finance_marts"."mart_par_secteur__dbt_backup" cascade
+[0m20:11:39.628662 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.176 seconds
+[0m20:11:39.630451 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:11:39.631379 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:39.631909 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:11:39.934969 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.302 seconds
+[0m20:11:39.936758 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:39.937932 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:11:40.023221 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.084 seconds
+[0m20:11:40.025615 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: ROLLBACK
+[0m20:11:40.196228 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: Close
+[0m20:11:40.199839 [info ] [Thread-1  ]: 3 of 3 OK created sql table model finance_marts.mart_par_secteur ............... [[32mSUCCESS[0m in 3.50s]
+[0m20:11:40.201862 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_secteur
+[0m20:11:40.204791 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:40.205941 [debug] [MainThread]: On master: BEGIN
+[0m20:11:40.206951 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:11:40.208347 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:40.209436 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:41.224843 [debug] [MainThread]: SQL status: SUCCESS in 1.018 seconds
+[0m20:11:41.226064 [debug] [MainThread]: On master: COMMIT
+[0m20:11:41.227418 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:41.228508 [debug] [MainThread]: On master: COMMIT
+[0m20:11:41.403354 [debug] [MainThread]: SQL status: SUCCESS in 0.174 seconds
+[0m20:11:41.404639 [debug] [MainThread]: On master: Close
+[0m20:11:41.406225 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:11:41.407231 [debug] [MainThread]: Connection 'model.pipeline_finance.mart_par_secteur' was properly closed.
+[0m20:11:41.408356 [info ] [MainThread]: 
+[0m20:11:41.409440 [info ] [MainThread]: Finished running 1 view model, 2 table models in 0 hours 0 minutes and 19.68 seconds (19.68s).
+[0m20:11:41.412137 [debug] [MainThread]: Command end result
+[0m20:11:41.445893 [info ] [MainThread]: 
+[0m20:11:41.446576 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:11:41.446970 [info ] [MainThread]: 
+[0m20:11:41.447411 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m20:11:41.448163 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 20.288713, "process_user_time": 2.51267, "process_kernel_time": 0.182961, "process_mem_max_rss": "115856", "process_out_blocks": "2080", "process_in_blocks": "0"}
+[0m20:11:41.448654 [debug] [MainThread]: Command `dbt run` succeeded at 20:11:41.448574 after 20.29 seconds
+[0m20:11:41.448988 [debug] [MainThread]: Flushing usage events
+[0m20:11:42.931876 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 20:11:42.941354 | a9494316-ed98-4253-b468-0789913e4bca ==============================
+[0m20:11:42.941354 [info ] [MainThread]: Running with dbt=1.8.1
+[0m20:11:42.942179 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:11:43.013083 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m20:11:43.013810 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m20:11:43.204620 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m20:11:43.221848 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m20:11:43.332693 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:11:43.333232 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:11:43.451449 [info ] [MainThread]: Found 3 models, 1 source, 489 macros
+[0m20:11:43.453098 [info ] [MainThread]: 
+[0m20:11:43.453661 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m20:11:43.457568 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m20:11:43.475656 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:11:43.476114 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:11:43.476414 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:11:43.479977 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:43.481553 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:44.634674 [debug] [ThreadPool]: SQL status: SUCCESS in 1.158 seconds
+[0m20:11:44.638431 [debug] [ThreadPool]: On list_dev: Close
+[0m20:11:44.649169 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m20:11:44.649959 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m20:11:44.650389 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:44.650985 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:44.651504 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:45.869455 [debug] [ThreadPool]: SQL status: SUCCESS in 1.219 seconds
+[0m20:11:45.870882 [debug] [ThreadPool]: On list_dev: Close
+[0m20:11:45.872511 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_finance_marts)
+[0m20:11:45.882111 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:11:45.883296 [debug] [ThreadPool]: On list_dev_finance_marts: BEGIN
+[0m20:11:45.883957 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:45.884823 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:45.885235 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:46.991680 [debug] [ThreadPool]: SQL status: SUCCESS in 1.108 seconds
+[0m20:11:46.992896 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_marts"
+[0m20:11:46.993974 [debug] [ThreadPool]: On list_dev_finance_marts: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_marts"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_marts'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_marts'
+[0m20:11:47.189593 [debug] [ThreadPool]: SQL status: SUCCESS in 0.194 seconds
+[0m20:11:47.193345 [debug] [ThreadPool]: On list_dev_finance_marts: ROLLBACK
+[0m20:11:47.376841 [debug] [ThreadPool]: On list_dev_finance_marts: Close
+[0m20:11:47.379043 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_finance_marts, now list_dev_finance_staging)
+[0m20:11:47.396837 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:11:47.397959 [debug] [ThreadPool]: On list_dev_finance_staging: BEGIN
+[0m20:11:47.398739 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:47.399697 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:47.400082 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:48.420802 [debug] [ThreadPool]: SQL status: SUCCESS in 1.022 seconds
+[0m20:11:48.421961 [debug] [ThreadPool]: Using redshift connection "list_dev_finance_staging"
+[0m20:11:48.422966 [debug] [ThreadPool]: On list_dev_finance_staging: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "list_dev_finance_staging"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'finance_staging'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'finance_staging'
+[0m20:11:48.610083 [debug] [ThreadPool]: SQL status: SUCCESS in 0.186 seconds
+[0m20:11:48.613646 [debug] [ThreadPool]: On list_dev_finance_staging: ROLLBACK
+[0m20:11:48.783735 [debug] [ThreadPool]: On list_dev_finance_staging: Close
+[0m20:11:48.792348 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:48.792798 [debug] [MainThread]: On master: BEGIN
+[0m20:11:48.793246 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:11:48.793730 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:48.794092 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:49.867893 [debug] [MainThread]: SQL status: SUCCESS in 1.075 seconds
+[0m20:11:49.868395 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:49.868786 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m20:11:50.095012 [debug] [MainThread]: SQL status: SUCCESS in 0.226 seconds
+[0m20:11:50.096475 [debug] [MainThread]: On master: ROLLBACK
+[0m20:11:50.277824 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:50.279369 [debug] [MainThread]: On master: BEGIN
+[0m20:11:50.370027 [debug] [MainThread]: SQL status: SUCCESS in 0.089 seconds
+[0m20:11:50.370512 [debug] [MainThread]: On master: COMMIT
+[0m20:11:50.370951 [debug] [MainThread]: Using redshift connection "master"
+[0m20:11:50.371457 [debug] [MainThread]: On master: COMMIT
+[0m20:11:50.549839 [debug] [MainThread]: SQL status: SUCCESS in 0.178 seconds
+[0m20:11:50.550717 [debug] [MainThread]: On master: Close
+[0m20:11:50.551792 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:11:50.552184 [info ] [MainThread]: 
+[0m20:11:50.557928 [debug] [Thread-1  ]: Began running node model.pipeline_finance.stg_entreprises
+[0m20:11:50.558638 [info ] [Thread-1  ]: 1 of 3 START sql view model finance_staging.stg_entreprises .................... [RUN]
+[0m20:11:50.559186 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_finance_staging, now model.pipeline_finance.stg_entreprises)
+[0m20:11:50.559588 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.stg_entreprises
+[0m20:11:50.563532 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.stg_entreprises"
+[0m20:11:50.564594 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.stg_entreprises
+[0m20:11:50.599365 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.stg_entreprises"
+[0m20:11:50.603574 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:50.604071 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:50.604445 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:50.604962 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:50.605335 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:51.620051 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.015 seconds
+[0m20:11:51.621762 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:51.622872 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+
+
+  create view "dev"."finance_staging"."stg_entreprises__dbt_tmp" as (
+    WITH source AS (
+    SELECT * FROM "dev"."public"."entreprises"
+),
+
+cleaned AS (
+    SELECT
+        siren,
+        denomination,
+        activite_principale,
+        NULLIF(tranche_effectifs, 'NN') AS tranche_effectifs,
+        CAST(date_creation AS DATE)     AS date_creation,
+        categorie_juridique,
+        CAST(date_ingestion AS DATE)    AS date_ingestion
+        FROM source
+        WHERE siren IS NOT NULL 
+)
+
+SELECT * FROM cleaned
+  ) ;
+[0m20:11:52.056225 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.432 seconds
+[0m20:11:52.113828 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:52.114324 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises" rename to "stg_entreprises__dbt_backup"
+[0m20:11:52.371993 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.257 seconds
+[0m20:11:52.376412 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:52.376998 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+alter table "dev"."finance_staging"."stg_entreprises__dbt_tmp" rename to "stg_entreprises"
+[0m20:11:52.655059 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.277 seconds
+[0m20:11:52.680922 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:52.681624 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:52.682042 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:53.200944 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.518 seconds
+[0m20:11:53.201682 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:53.202076 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:53.370054 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.168 seconds
+[0m20:11:53.377034 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_staging"."stg_entreprises__dbt_backup"
+[0m20:11:53.383446 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:53.383952 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.stg_entreprises"} */
+drop view if exists "dev"."finance_staging"."stg_entreprises__dbt_backup" cascade
+[0m20:11:53.556732 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.172 seconds
+[0m20:11:53.557790 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:53.558291 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:53.558650 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: COMMIT
+[0m20:11:54.008839 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.450 seconds
+[0m20:11:54.009521 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.stg_entreprises"
+[0m20:11:54.009929 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: BEGIN
+[0m20:11:54.093794 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.083 seconds
+[0m20:11:54.097316 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: ROLLBACK
+[0m20:11:54.266748 [debug] [Thread-1  ]: On model.pipeline_finance.stg_entreprises: Close
+[0m20:11:54.269838 [info ] [Thread-1  ]: 1 of 3 OK created sql view model finance_staging.stg_entreprises ............... [[32mSUCCESS[0m in 3.71s]
+[0m20:11:54.270564 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.stg_entreprises
+[0m20:11:54.271460 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_annee
+[0m20:11:54.272034 [info ] [Thread-1  ]: 2 of 3 START sql table model finance_marts.mart_par_annee ...................... [RUN]
+[0m20:11:54.272533 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.stg_entreprises, now model.pipeline_finance.mart_par_annee)
+[0m20:11:54.272911 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_annee
+[0m20:11:54.276063 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_annee"
+[0m20:11:54.276682 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_annee
+[0m20:11:54.310814 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_annee"
+[0m20:11:54.313265 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:54.313946 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:54.314345 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:54.314937 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:54.315427 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:55.418239 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.104 seconds
+[0m20:11:55.420320 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:55.421587 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_annee__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+SELECT
+    EXTRACT(YEAR FROM date_creation) AS annee_de_creation,
+    COUNT(*) AS nb_entreprises
+FROM entreprises
+GROUP BY annee_de_creation
+ORDER BY annee_de_creation ASC
+  );
+[0m20:11:55.716625 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.294 seconds
+[0m20:11:55.728457 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:55.729883 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee" rename to "mart_par_annee__dbt_backup"
+[0m20:11:56.266315 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.535 seconds
+[0m20:11:56.272192 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:56.272660 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+alter table "dev"."finance_marts"."mart_par_annee__dbt_tmp" rename to "mart_par_annee"
+[0m20:11:56.545332 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.272 seconds
+[0m20:11:56.561023 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:56.562120 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:56.562968 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:57.196810 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.633 seconds
+[0m20:11:57.199025 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:57.200469 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:57.388819 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.187 seconds
+[0m20:11:57.398101 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_annee__dbt_backup"
+[0m20:11:57.404335 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:57.404941 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_annee"} */
+drop table if exists "dev"."finance_marts"."mart_par_annee__dbt_backup" cascade
+[0m20:11:57.592132 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.186 seconds
+[0m20:11:57.595352 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:57.597418 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:57.598607 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: COMMIT
+[0m20:11:58.010913 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.411 seconds
+[0m20:11:58.012823 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_annee"
+[0m20:11:58.014100 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: BEGIN
+[0m20:11:58.104756 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.089 seconds
+[0m20:11:58.107727 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: ROLLBACK
+[0m20:11:58.291073 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_annee: Close
+[0m20:11:58.294027 [info ] [Thread-1  ]: 2 of 3 OK created sql table model finance_marts.mart_par_annee ................. [[32mSUCCESS[0m in 4.02s]
+[0m20:11:58.296271 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_annee
+[0m20:11:58.297726 [debug] [Thread-1  ]: Began running node model.pipeline_finance.mart_par_secteur
+[0m20:11:58.299331 [info ] [Thread-1  ]: 3 of 3 START sql table model finance_marts.mart_par_secteur .................... [RUN]
+[0m20:11:58.300845 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.pipeline_finance.mart_par_annee, now model.pipeline_finance.mart_par_secteur)
+[0m20:11:58.302134 [debug] [Thread-1  ]: Began compiling node model.pipeline_finance.mart_par_secteur
+[0m20:11:58.309661 [debug] [Thread-1  ]: Writing injected SQL for node "model.pipeline_finance.mart_par_secteur"
+[0m20:11:58.310683 [debug] [Thread-1  ]: Began executing node model.pipeline_finance.mart_par_secteur
+[0m20:11:58.316002 [debug] [Thread-1  ]: Writing runtime sql for node "model.pipeline_finance.mart_par_secteur"
+[0m20:11:58.317575 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:58.317935 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:11:58.318259 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:11:58.318738 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:11:58.319088 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:11:59.402864 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.084 seconds
+[0m20:11:59.403799 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:59.404441 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+
+  
+    
+
+  create  table
+    "dev"."finance_marts"."mart_par_secteur__dbt_tmp"
+    
+    
+    
+  as (
+    WITH entreprises AS (
+    SELECT * FROM "dev"."finance_staging"."stg_entreprises"
+
+)
+
+
+SELECT
+    activite_principale,
+    COUNT(*) AS nb_entreprises,
+    COUNT(CASE WHEN tranche_effectifs IS NULL THEN 1 END) AS nb_sans_effectifs
+FROM entreprises
+GROUP BY activite_principale
+  );
+[0m20:11:59.705099 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.300 seconds
+[0m20:11:59.720557 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:11:59.721515 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur" rename to "mart_par_secteur__dbt_backup"
+[0m20:12:00.263517 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.541 seconds
+[0m20:12:00.274075 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:00.275348 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+alter table "dev"."finance_marts"."mart_par_secteur__dbt_tmp" rename to "mart_par_secteur"
+[0m20:12:00.551142 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.275 seconds
+[0m20:12:00.558418 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:12:00.560044 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:00.561178 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:12:00.981679 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.419 seconds
+[0m20:12:00.983512 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:00.984802 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:12:01.166133 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.180 seconds
+[0m20:12:01.175801 [debug] [Thread-1  ]: Applying DROP to: "dev"."finance_marts"."mart_par_secteur__dbt_backup"
+[0m20:12:01.179211 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:01.180018 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "pipeline_finance", "target_name": "dev", "node_id": "model.pipeline_finance.mart_par_secteur"} */
+drop table if exists "dev"."finance_marts"."mart_par_secteur__dbt_backup" cascade
+[0m20:12:01.370669 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.190 seconds
+[0m20:12:01.375455 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:12:01.378308 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:01.380308 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: COMMIT
+[0m20:12:01.802522 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.420 seconds
+[0m20:12:01.804252 [debug] [Thread-1  ]: Using redshift connection "model.pipeline_finance.mart_par_secteur"
+[0m20:12:01.805500 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: BEGIN
+[0m20:12:01.901818 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.095 seconds
+[0m20:12:01.904513 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: ROLLBACK
+[0m20:12:02.086822 [debug] [Thread-1  ]: On model.pipeline_finance.mart_par_secteur: Close
+[0m20:12:02.089699 [info ] [Thread-1  ]: 3 of 3 OK created sql table model finance_marts.mart_par_secteur ............... [[32mSUCCESS[0m in 3.79s]
+[0m20:12:02.091877 [debug] [Thread-1  ]: Finished running node model.pipeline_finance.mart_par_secteur
+[0m20:12:02.094756 [debug] [MainThread]: Using redshift connection "master"
+[0m20:12:02.095591 [debug] [MainThread]: On master: BEGIN
+[0m20:12:02.096270 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:12:02.097354 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m20:12:02.098504 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m20:12:03.131747 [debug] [MainThread]: SQL status: SUCCESS in 1.035 seconds
+[0m20:12:03.133066 [debug] [MainThread]: On master: COMMIT
+[0m20:12:03.134505 [debug] [MainThread]: Using redshift connection "master"
+[0m20:12:03.135909 [debug] [MainThread]: On master: COMMIT
+[0m20:12:03.303367 [debug] [MainThread]: SQL status: SUCCESS in 0.166 seconds
+[0m20:12:03.304024 [debug] [MainThread]: On master: Close
+[0m20:12:03.304782 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:12:03.305218 [debug] [MainThread]: Connection 'model.pipeline_finance.mart_par_secteur' was properly closed.
+[0m20:12:03.305721 [info ] [MainThread]: 
+[0m20:12:03.306182 [info ] [MainThread]: Finished running 1 view model, 2 table models in 0 hours 0 minutes and 19.85 seconds (19.85s).
+[0m20:12:03.307224 [debug] [MainThread]: Command end result
+[0m20:12:03.335345 [info ] [MainThread]: 
+[0m20:12:03.335816 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:12:03.336154 [info ] [MainThread]: 
+[0m20:12:03.336511 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m20:12:03.337260 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 20.490309, "process_user_time": 2.766881, "process_kernel_time": 0.165851, "process_mem_max_rss": "197496", "process_out_blocks": "2080", "process_in_blocks": "0"}
+[0m20:12:03.337791 [debug] [MainThread]: Command `dbt run` succeeded at 20:12:03.337709 after 20.49 seconds
+[0m20:12:03.338134 [debug] [MainThread]: Flushing usage events
