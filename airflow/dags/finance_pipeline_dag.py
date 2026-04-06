@@ -33,7 +33,7 @@ with DAG(
     # Tâche 3
     t3 = BashOperator(
         task_id="dbt_run",
-        bash_command="cd /opt/airflow/dbt && dbt run && dbt run"
+        bash_command="cd /opt/airflow/dbt && dbt snapshots && dbt run"
     )
 
     # Ordre d'exécution
