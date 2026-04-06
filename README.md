@@ -1,3 +1,5 @@
+<img width="796" height="552" alt="Architecture" src="https://github.com/user-attachments/assets/0e93bc3f-49fe-42f2-b4a2-d815fe0db55d" />
+
 # finance-pipeline
 
 Pipeline de données qui récupère les entreprises françaises depuis l'API 
